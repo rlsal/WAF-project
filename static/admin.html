@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAF Admin Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <script src="admin.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1 class="col-sm-12 text-center">Settings</h1>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label" style="text-align:left !important">System Mode:</label>
+                <div class="col-sm-3 text-center">
+                    <select id="system_mode" class="form-control">
+                        <option value="ids">IDS</option>
+                        <option value="ips">IPS</option>
+                        <option value="no_action">No Action</option>
+                        <option value="per_attack">Per Attack</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Prohibited File Types:</label>
+                <div class="col-sm-4">
+                    <input id="prohibited_file_types" class="form-control" type="text">
+                </div>
+            </div>
+            <div data-attack-type="sql_injection" class="form-group">
+                <label for="input1" class="col-sm-3 control-label" style="text-align:left !important;">SQL
+                    Injection:</label>
+                <div class="col-sm-3 text-center">
+                    <select class="form-control attack-action">
+                        <option value="ids">IDS</option>
+                        <option value="ips">IPS</option>
+                        <option value="no_action">No Action</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Report Type:</label>
+                <div class="col-sm-5">
+                    <select class="form-control attack-report">
+                        <option value="ERROR">Error</option>
+                        <option value="INFO">Info</option>
+                        <option value="WARN">Warning</option>
+                    </select>
+                </div>
+            </div>
+            <div data-attack-type="broken_auth" class="form-group">
+                <label for="input2" class="col-sm-3 control-label" style="text-align:left !important;">Broken
+                    Authentication
+                    and Session Management:</label>
+                <div class="col-sm-3">
+                    <select class="form-control attack-action">
+                        <option value="ids">IDS</option>
+                        <option value="ips">IPS</option>
+                        <option value="no_action">No Action</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Report Type:</label>
+                <div class="col-sm-5">
+                    <select class="form-control attack-report">
+                        <option value="ERROR">Error</option>
+                        <option value="INFO">Info</option>
+                        <option value="WARN">Warning</option>
+                    </select>
+                </div>
+            </div>
+            <div data-attack-type="xss" class="form-group">
+                <label for="input3" class="col-sm-3 control-label" style="text-align:left !important;">XSS:</label>
+                <div class="col-sm-3">
+                    <select class="form-control attack-action">
+                        <option value="ids">IDS</option>
+                        <option value="ips">IPS</option>
+                        <option value="no_action">No Action</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Report Type:</label>
+                <div class="col-sm-5">
+                    <select class="form-control attack-report">
+                        <option value="ERROR">Error</option>
+                        <option value="INFO">Info</option>
+                        <option value="WARN">Warning</option>
+                    </select>
+                </div>
+            </div>
+            <div data-attack-type="insecure_direct_object_references" class="form-group">
+                <label for="input4" class="col-sm-3 control-label" style="text-align:left !important;">Insecure Direct
+                    Object References:</label>
+                <div class="col-sm-3">
+                    <select class="form-control attack-action">
+                        <option value="ids">IDS</option>
+                        <option value="ips">IPS</option>
+                        <option value="no_action">No Action</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Report Type:</label>
+                <div class="col-sm-5">
+                    <select class="form-control attack-report">
+                        <option value="ERROR">Error</option>
+                        <option value="INFO">Info</option>
+                        <option value="WARN">Warning</option>
+                    </select>
+                </div>
+            </div>
+            <div data-attack-type="security_misconfiguration" class="form-group">
+                <label for="input5" class="col-sm-3 control-label" style="text-align:left !important;">Security
+                    Misconfiguration:</label>
+                <div class="col-sm-3">
+                    <select class="form-control attack-action">
+                        <option value="ids">IDS</option>
+                        <option value="ips">IPS</option>
+                        <option value="no_action">No Action</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Report Type:</label>
+                <div class="col-sm-5">
+                    <select class="form-control attack-report ">
+                        <option value="ERROR">Error</option>
+                        <option value="INFO">Info</option>
+                        <option value="WARN">Warning</option>
+                    </select>
+                </div>
+            </div>
+            <!-- <div data-attack-type="sensitive_data_exposure" class="form-group">
+                <label for="input6" class="col-sm-3 control-label" style="text-align:left !important;">Sensitive Data
+                    Exposure:</label>
+                <div class="col-sm-3">
+                    <select class="form-control attack-action">
+                        <option value="ids">IDS</option>
+                        <option value="ips">IPS</option>
+                        <option value="no_action">No Action</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Report Type:</label>
+                <div class="col-sm-5">
+                    <select class="form-control attack-report">
+                        <option value="ERROR">Error</option>
+                        <option value="INFO">Info</option>
+                        <option value="WARN">Warning</option>
+                    </select>
+                </div>
+            </div>
+            <div data-attack-type="missing_function_level_access_control" class="form-group">
+                <label for="input7" class="col-sm-3 control-label" style="text-align:left !important;">Missing Function
+                    Level Access Control:</label>
+                <div class="col-sm-3">
+                    <select class="form-control attack-action">
+                        <option value="ids">IDS</option>
+                        <option value="ips">IPS</option>
+                        <option value="no_action">No Action</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Report Type:</label>
+                <div class="col-sm-5">
+                    <select class="form-control attack-report">
+                        <option value="ERROR">Error</option>
+                        <option value="INFO">Info</option>
+                        <option value="WARN">Warning</option>
+                    </select>
+                </div>
+            </div> -->
+            <div data-attack-type="csrf" class="form-group">
+                <label for="input8" class="col-sm-3 control-label" style="text-align:left !important;">CSRF:</label>
+                <div class="col-sm-3">
+                    <select class="form-control attack-action">
+                        <option value="ids">IDS</option>
+                        <option value="ips">IPS</option>
+                        <option value="no_action">No Action</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Report Type:</label>
+                <div class="col-sm-5">
+                    <select class="form-control attack-report">
+                        <option value="ERROR">Error</option>
+                        <option value="INFO">Info</option>
+                        <option value="WARN">Warning</option>
+                    </select>
+                </div>
+            </div>
+            <div data-attack-type="using_known_vulnerable_components" class="form-group">
+                <label for="input9" class="col-sm-3 control-label" style="text-align:left !important;">Using Known
+                    Vulnerable Components:</label>
+                <div class="col-sm-3">
+                    <select class="form-control attack-action">
+                        <option value="ids">IDS</option>
+                        <option value="ips" style="text-align:left !important;">IPS</option>
+                        <option value="no_action">No Action</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Report Type:</label>
+                <div class="col-sm-5">
+                    <select class="form-control attack-report">
+                        <option value="ERROR">Error</option>
+                        <option value="INFO">Info</option>
+                        <option value="WARN">Warning</option>
+                    </select>
+                </div>
+            </div>
+            <div data-attack-type="unvalidated_redirects_and_forwards" class="form-group">
+                <label for="input10" class="col-sm-3 control-label" style="text-align:left !important;">Unvalidated
+                    Redirects and Forwards:</label>
+                <div class="col-sm-3">
+                    <select class="form-control attack-action">
+                        <option value="ids">IDS</option>
+                        <option value="ips">IPS</option>
+                        <option value="no_action">No Action</option>
+                    </select>
+                </div>
+                <label class="control-label" style="float:left !important;">Report Type:</label>
+                <div class="col-sm-5">
+                    <select class="form-control attack-report">
+            <option value="ERROR">Error</option>
+                        <option value="INFO">Info</option>
+                        <option value="WARN">Warning</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class=" col-sm-12	 text-center">
+                    <button type="submit" class="btn btn-default">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+

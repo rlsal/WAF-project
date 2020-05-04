@@ -1,0 +1,92 @@
+POST / HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Content-Length: 10
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Origin: null
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+Cookie: clef_wp_session=f9e24fef0eed3f279df644ec754c865e%7C%7C2889919232%7C%7C1429193056; wp-settings-1=libraryContent%3Dbrowse%26editor%3Dhtml%26align%3Dleft%26dfw_width%3D772%26posts_list_mode%3Dlist%26mfold%3Do%26editor_expand%3Doff; wp-settings-time-1=1431417997; __atuvc=501%7C15%2C45%7C16%2C214%7C17%2C37%7C18%2C94%7C19; csrftoken=gYirBOMv0Mx2Yt6EaaHTeK6G3TTaWVx5; _ga=GA1.1.223754707.1428852238
+
+txt=<script>adasdas</script>
+
+
+
+POST /
+Host: localhost:5000
+Connection: keep-alive
+Content-Length: 10
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Origin: null
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+Cookie: clef_wp_session=f9e24fef0eed3f279df644ec754c865e%7C%7C2889919232%7C%7C1429193056; wp-settings-1=libraryContent%3Dbrowse%26editor%3Dhtml%26align%3Dleft%26dfw_width%3D772%26posts_list_mode%3Dlist%26mfold%3Do%26editor_expand%3Doff; wp-settings-time-1=1431417997; __atuvc=501%7C15%2C45%7C16%2C214%7C17%2C37%7C18%2C94%7C19; csrftoken=gYirBOMv0Mx2Yt6EaaHTeK6G3TTaWVx5; _ga=GA1.1.223754707.1428852238
+
+txt=adasdas
+
+
+
+POST / HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Content-Length: 10
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Origin: null
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+Cookie: clef_wp_session=f9e24fef0eed3f279df644ec754c865e%7C%7C2889919232%7C%7C1429193056; wp-settings-1=libraryContent%3Dbrowse%26editor%3Dhtml%26align%3Dleft%26dfw_width%3D772%26posts_list_mode%3Dlist%26mfold%3Do%26editor_expand%3Doff; wp-settings-time-1=1431417997; __atuvc=501%7C15%2C45%7C16%2C214%7C17%2C37%7C18%2C94%7C19; csrftoken=gYirBOMv0Mx2Yt6EaaHTeK6G3TTaWVx5; _ga=GA1.1.223754707.1428852238
+
+txt=&lt;script&gt;adasdas&lt;/script&gt;
+
+
+
+POST /<script>alert("TEST");</script> HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Content-Length: 10
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Origin: null
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+Cookie: clef_wp_session=f9e24fef0eed3f279df644ec754c865e%7C%7C2889919232%7C%7C1429193056; wp-settings-1=libraryContent%3Dbrowse%26editor%3Dhtml%26align%3Dleft%26dfw_width%3D772%26posts_list_mode%3Dlist%26mfold%3Do%26editor_expand%3Doff; wp-settings-time-1=1431417997; __atuvc=501%7C15%2C45%7C16%2C214%7C17%2C37%7C18%2C94%7C19; csrftoken=gYirBOMv0Mx2Yt6EaaHTeK6G3TTaWVx5; _ga=GA1.1.223754707.1428852238
+
+txt=adasdas
+
+
+
+POST / HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Content-Length: 10
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Origin: null
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+Cookie: clef_wp_session=f9e24fef0eed3f279df644ec754c865e%7C%7C2889919232%7C%7C1429193056; wp-settings-1=libraryContent%3Dbrowse%26editor%3Dhtml%26align%3Dleft%26dfw_width%3D772%26posts_list_mode%3Dlist%26mfold%3Do%26editor_expand%3Doff; wp-settings-time-1=1431417997; __atuvc=501%7C15%2C45%7C16%2C214%7C17%2C37%7C18%2C94%7C19; csrftoken=gYirBOMv0Mx2Yt6EaaHTeK6G3TTaWVx5; _ga=GA1.1.223754707.1428852238
+
+txt=<IMG SRC="jav&#x09;ascript:alert('S');">
